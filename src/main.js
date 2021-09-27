@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 
 import VueClazyLoad from "vue-clazy-load";
+import "./assets/styles/tailwind.css";
 
 Vue.config.productionTip = false;
 Vue.use(VueClazyLoad);

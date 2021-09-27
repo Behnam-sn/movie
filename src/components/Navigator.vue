@@ -1,12 +1,11 @@
 <template>
-	<nav>
+	<nav class="flex flex-col justify-center items-center w-32 h-screen">
 		<router-link to="/movie" custom v-slot="{ navigate }">
 			<div @click="navigate" @keypress.enter="navigate" role="link">
 				<div
 					title="Movie"
-					class="link"
-					:class="{ active: selected === 'movie' }"
-					@click="changeSelected('movie')"
+					class="link flex justify-center items-center rounded-xl p-3 mb-14 cursor-pointer"
+					:class="{ active: currentRouteName.includes('movie') }"
 				>
 					<svg
 						class="icon"
@@ -24,9 +23,8 @@
 			<div @click="navigate" @keypress.enter="navigate" role="link">
 				<div
 					title="Series"
-					class="link"
-					:class="{ active: selected === 'series' }"
-					@click="changeSelected('series')"
+					class="link flex justify-center items-center rounded-xl p-3 mb-14 cursor-pointer"
+					:class="{ active: currentRouteName.includes('series') }"
 				>
 					<svg
 						class="icon"
@@ -50,9 +48,8 @@
 			<div @click="navigate" @keypress.enter="navigate" role="link">
 				<div
 					title="About"
-					class="link"
-					:class="{ active: selected === 'about' }"
-					@click="changeSelected('about')"
+					class="link flex justify-center items-center rounded-xl p-3 mb-14 cursor-pointer"
+					:class="{ active: currentRouteName === 'about' }"
 				>
 					<svg
 						class="icon"
@@ -76,53 +73,32 @@
 <script>
 export default {
 	name: "navigator",
-	data() {
-		return {
-			selected: "movie",
-		};
-	},
-	methods: {
-		changeSelected(val) {
-			this.selected = val;
+	computed: {
+		currentRouteName() {
+			return this.$route.name;
 		},
 	},
 };
 </script>
 
-<style lang="scss">
-nav {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	width: 8vw;
+<style lang="scss" scoped>
+.link {
+	transition: 0.4s ease-in-out;
 
-	.link {
-		cursor: pointer;
-		margin-bottom: 3rem;
-		padding: 0.7rem;
-		border-radius: 11px;
-		transition: 0.4s ease-in-out;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	&:hover {
+		background-color: darken($color: $purple, $amount: 10);
+	}
+}
 
-		&:hover {
-			background-color: darken($color: $purple, $amount: 10);
-		}
+.active {
+	background-color: $white;
+
+	&:hover {
+		background-color: $white;
 	}
 
-	.active {
-		background-color: $white;
-
-		&:hover {
-			background-color: $white;
-		}
-
-		.icon {
-			fill: $black;
-		}
+	.icon {
+		fill: $black;
 	}
 }
 

@@ -1,28 +1,23 @@
 <template>
-	<div class="container">
-		<div id="about">
-			<h1>About Page</h1>
-			<div>
-				<h2>Creator : Behnam</h2>
-				<h2>
-					Design and Insparion :
-					<a
-						href="https://dribbble.com/shots/6844561-Movie-App?utm_source=Clipboard_Shot&utm_campaign=Purrweb&utm_content=Movie%20App&utm_medium=Social_Share"
-						>Purrweb UX</a
-					>
-				</h2>
-			</div>
+	<div id="about" class="w-full m-6 p-10 rounded-3xl">
+		<h1>About Page</h1>
+		<div>
+			<h2>Creator : Behnam</h2>
+			<h2>
+				Design and Insparion :
+				<a
+					href="https://dribbble.com/shots/6844561-Movie-App?utm_source=Clipboard_Shot&utm_campaign=Purrweb&utm_content=Movie%20App&utm_medium=Social_Share"
+					class="underline"
+					>Purrweb UX</a
+				>
+			</h2>
 		</div>
 	</div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #about {
-	width: 100%;
-	padding: 2rem;
-	margin: 2rem;
-	margin-left: 0;
-	border-radius: 25px;
+	font-weight: bold;
 	background-color: darken($color: $purple, $amount: 7%);
 
 	h1,
@@ -40,13 +35,11 @@
 
 	a {
 		color: #ffffff;
-		text-decoration: none;
-		background-color: transparent;
 		transition: all 0.4s linear;
-	}
 
-	a:hover {
-		color: darken($color: #ffffff, $amount: 10%);
+		&:hover {
+			color: darken($color: #ffffff, $amount: 10%);
+		}
 	}
 }
 </style>

@@ -7,8 +7,8 @@ Vue.use(VueRouter);
 const routes = [
 	{
 		path: "/movie",
+		name: "themovie",
 		component: Movie,
-		// component: () => import("../views/Movie.vue"),
 	},
 	{
 		path: "/movie/:name",
@@ -17,6 +17,7 @@ const routes = [
 	},
 	{
 		path: "/series",
+		name: "theseries",
 		component: () => import("../views/Series.vue"),
 	},
 	{
