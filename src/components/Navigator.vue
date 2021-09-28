@@ -1,10 +1,10 @@
 <template>
-	<nav class="flex flex-col justify-center items-center w-32 h-screen">
+	<nav class="flex flex-col justify-center items-center h-screen mx-6">
 		<router-link to="/movie" custom v-slot="{ navigate }">
 			<div @click="navigate" @keypress.enter="navigate" role="link">
 				<div
 					title="Movie"
-					class="link flex justify-center items-center rounded-xl p-3 mb-14 cursor-pointer"
+					class="link"
 					:class="{ active: currentRouteName.includes('movie') }"
 				>
 					<svg
@@ -23,7 +23,7 @@
 			<div @click="navigate" @keypress.enter="navigate" role="link">
 				<div
 					title="Series"
-					class="link flex justify-center items-center rounded-xl p-3 mb-14 cursor-pointer"
+					class="link"
 					:class="{ active: currentRouteName.includes('series') }"
 				>
 					<svg
@@ -48,7 +48,7 @@
 			<div @click="navigate" @keypress.enter="navigate" role="link">
 				<div
 					title="About"
-					class="link flex justify-center items-center rounded-xl p-3 mb-14 cursor-pointer"
+					class="link"
 					:class="{ active: currentRouteName === 'about' }"
 				>
 					<svg
@@ -83,6 +83,8 @@ export default {
 
 <style lang="scss" scoped>
 .link {
+	@apply flex justify-center items-center rounded-xl p-3 mb-14 cursor-pointer;
+
 	transition: 0.4s ease-in-out;
 
 	&:hover {
@@ -103,9 +105,9 @@ export default {
 }
 
 .icon {
+	@apply w-8 h-8;
+
 	fill: $white;
-	width: 2rem;
-	height: 2rem;
 	transition: 0.4s ease-in-out;
 }
 </style>

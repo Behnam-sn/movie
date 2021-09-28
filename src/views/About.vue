@@ -1,5 +1,5 @@
 <template>
-	<div id="about" class="w-full m-6 p-10 rounded-3xl">
+	<div id="about" class="w-full ml-0 m-6 p-10 rounded-3xl">
 		<h1>About Page</h1>
 		<div>
 			<h2>Creator : Behnam</h2>

@@ -5,7 +5,7 @@
 			focusable="false"
 			data-prefix="fas"
 			data-icon="search"
-			class="svg-inline--fa fa-search fa-w-16"
+			class="w-4 h-4"
 			role="img"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 512 512"
@@ -26,7 +26,5 @@ export default {
 <style lang="scss" scoped>
 svg {
 	fill: #ffffff;
-	width: 1rem;
-	height: 1rem;
 }
 </style>

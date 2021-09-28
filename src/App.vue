@@ -1,11 +1,9 @@
 <template>
-	<div id="app">
-		<div class="flex">
-			<navigator></navigator>
-			<transition name="right" mode="out-in">
-				<router-view></router-view>
-			</transition>
-		</div>
+	<div id="app" class="flex overflow-x-hidden">
+		<navigator></navigator>
+		<transition name="right" mode="out-in">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
@@ -24,11 +22,8 @@ export default {
 	font-family: "Noto Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	width: 100vw;
-	height: 100vh;
 	background-color: $purple;
 	color: $white;
-	overflow-x: hidden;
 }
 
 // animation

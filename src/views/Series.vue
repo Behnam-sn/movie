@@ -1,6 +1,6 @@
 <template>
 	<div class="flex justify-between w-full">
-		<div class="w-2/3">
+		<div class="w-full sm:w-1/2 xl:w-3/5">
 			<div id="title" class="flex items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 					<path

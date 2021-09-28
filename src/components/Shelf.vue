@@ -79,9 +79,13 @@
 					</div>
 				</clazy-load>
 				<div
-					class="overlay transition-all absolute inset-0 opacity-40"
+					class="overlay z-10 transition-all absolute inset-0 opacity-50"
 				></div>
-				<div class="title absolute">{{ item.title }}</div>
+				<div
+					class="z-20 text-gray-50 font-bold absolute bottom-5 left-5"
+				>
+					{{ item.title }}
+				</div>
 			</div>
 		</div>
 	</transition>
@@ -119,17 +123,9 @@ export default {
 <style lang="scss" scoped>
 .overlay {
 	background: rgba(0, 0, 0, 0.6);
-	z-index: 1;
 
 	&:hover {
 		background: none;
 	}
-}
-.title {
-	color: #f2f2f2;
-	font-weight: bold;
-	bottom: 1rem;
-	left: 1rem;
-	z-index: 2;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h1 class="text-2xl font-bold mt-5">Browse by category</h1>
-		<div class="flex my-4">
+		<h1 class="text-xl font-bold mt-5">Browse by category</h1>
+		<div class="flex my-4 overflow-x-hidden">
 			<div
 				v-for="item in categorysList"
 				:key="item"
