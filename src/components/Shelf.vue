@@ -1,14 +1,17 @@
 <template>
 	<transition name="down" mode="out-in" appear>
-		<div class="flex flex-wrap" :key="category">
+		<div
+			class="grid gap-5 grid-cols-1 lg:grid-cols-2 sm:pr-5 xl:pr-28 2xl:pr-52"
+			:key="category"
+		>
 			<div
 				v-for="item in items"
 				:key="item.title"
 				@click="show(item.title)"
-				class="max-w-sm cursor-pointer overflow-hidden relative rounded-xl mb-5 mr-5"
+				class="cursor-pointer overflow-hidden relative rounded-xl"
 			>
 				<clazy-load :src="item.thumbnail">
-					<img :src="item.thumbnail" />
+					<img class="w-full h-auto" :src="item.thumbnail" />
 					<div class="preloader" slot="placeholder">
 						<svg
 							version="1.1"
